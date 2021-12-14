@@ -1,1 +1,54 @@
+<html>
+    <head><title>Guess the number</title></head>
+
+<body>
+    <h1>Guess the number</h1>
+    <script>
+        let num = Math.floor(Math.random() * 11);
+        let guess = prompt("Guess a number between 1 and 10");
+        let counter = 0;
+        let gotIt = false;
+        let feedback ="";
+        let times = "times";//plurral
+
+        /*
+        counter = counter + 1
+        counter +=1
+        counter++
+
+        */
+
+        while(gotIt == false){
+            counter++;
+        if(guess == num){
+
+            if(counter==1){
+                times = "times";
+            }
+
+            feedback = `The number was ${num} and you guessed ${counter} ${times}`;
+            alert(feedback);
+            gotIt = true;
+        }else if(num > guess){//higher
+            guess = prompt("That was incorect. Guess higher!");
+
+        }else if(num < guess){//lower
+            guess = prompt("That was incorect. Guess lower!");
+        
+        
+        }else{
+            alert("You should not see this!")
+        }
+        }
+
+
+        alert(num);
+    </script>
+
+
+</body>
+
+
+</html>
+
 
